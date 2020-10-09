@@ -6,6 +6,7 @@ This program aims to automatize the usual workflow of training to a code maratho
 and compare it to an ideal one (This workflow here is called a __test__). 
 Judge will do this for you, repeating this process for whole a batch of inputs and outputs, while keeping track of
 which ones result in __runtime-errors__ or __unexpected behavior__.  
+  
 After running all tests, Judge will print the current code **precision** (How many tests haven't failed, i.e., how many program outputs were the same as the expected ones), the **number of runtime errors and which tests caused them** (If there are any) and the **number of unexpected behaviors and which tests caused them** (If there are any).  
   
 **Requeriments**  
