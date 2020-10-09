@@ -15,8 +15,8 @@ After running all tests, Judge will print the current code **precision** (How ma
     
 - All input or output files must be named with number at the end to identify which test is it.  The number must be between 1 and the total 
 number of input/output archives on that folder;  
-  -Input files (4 in total): someNameIn1, someNameIn2, someNameIn3, someNameIn4  
-  -Output files (4 in total): someNameOut1, someNameOut2, someNameOut3, someNameOut4  
+  - Input files (4 in total): someNameIn1, someNameIn2, someNameIn3, someNameIn4  
+  - Output files (4 in total): someNameOut1, someNameOut2, someNameOut3, someNameOut4  
   
 **How to run it**  
 Judge utilizes of java CLI arguments to complete the task. In order to run it, one must need to input 4 arguments:  
