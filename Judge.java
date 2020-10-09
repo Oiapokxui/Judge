@@ -83,18 +83,16 @@ class Judge {
 				command = goTo + folderPath + " && " + listInputs ;
 				stdOut = OS.executeCommand(command) ;
 			}
-			if ( stdOut.length == 0) return false;
+			return (stdOut.length == 0);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
-		return true;
 	}
 	 
 	public static boolean isValidPath (String folderPath) throws IOException{
 		String goTo = "cd ";
 		String[] err = OS.executeCommand(goTo + folderPath) ;
-		if ( err.length == 0) return true;
-		return false;
+		return (err.length == 0);
 	}
 	 
 	public static boolean archiveExists(String folderPath, String codeName) throws IOException {
@@ -102,18 +100,16 @@ class Judge {
 		String listAndMatchName = "ls -1 | grep \"" + codeName + "\"";
 		String findArchive =  goTo + folderPath + " && " + listAndMatchName;
 		String[] err = OS.executeCommand(findArchive);
-		if ( err.length != 0) return true;
-		return false;
+		return (err.length == 0);
 	}
 	 
 	public static boolean errorToCompile (String folderPath, String codeName) throws IOException {
 		String compileCode = " javac " + folderPath + "/" + codeName + ".java ";
 		String[] err = OS.executeCommand(compileCode);
-		if ( err.length != 0) return true;
-		return false;
+		return (err.length == 0);
 	}
 	 
-	public static Object judgeCode (String codeName, String folderPath, String inNamePat, String outNamePat) throws IOException {
+	public static Stats judgeCode (String codeName, String folderPath, String inNamePat, String outNamePat) throws IOException {
 		// All basic commands used in the function
 		String inPath = folderPath + "/input";
 		String outPath = folderPath + "/output";
@@ -180,7 +176,7 @@ class Judge {
 	 
 	// TO-DO: If message isn't error, then format it so it will fit the pattern:
 	// "Expected output: 
-	// 	Obtained output: "
+	//  Obtained output: "
 	public static String formatMsg (int testNumber, String command, String[] msg, boolean isErr){
 		String out = new String ("Test case number: ");
 		out = out + String.valueOf(testNumber) + "\n";
