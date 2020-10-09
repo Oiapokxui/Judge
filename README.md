@@ -1,6 +1,7 @@
 # Judge
 
 **What is it?**  
+  
 This program aims to automatize the usual workflow of training to a code marathon: Compile the program, run it, input something, recieve an output 
 and compare it to an ideal one (This workflow here is called a __test__). 
 Judge will do this for you, repeating this process for whole a batch of inputs and outputs, while keeping track of
@@ -19,6 +20,7 @@ number of input/output archives on that folder;
   - Output files (4 in total): someNameOut1, someNameOut2, someNameOut3, someNameOut4  
   
 **How to run it**  
+  
 Judge utilizes of java CLI arguments to complete the task. In order to run it, one must need to input 4 arguments:  
   - 1st: A string of a valid path where the code, input folder and output folders are located, without the last backlash:  
     E.g.: `~/home/user/codeFolder`  
