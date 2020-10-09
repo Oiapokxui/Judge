@@ -87,6 +87,7 @@ class Judge {
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
+		return true;
 	}
 	 
 	public static boolean isValidPath (String folderPath) throws IOException{
